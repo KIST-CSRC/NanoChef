@@ -1,6 +1,8 @@
 # NanoChef
 
-![alt text](Figure_workflow.PNG)
+<p align="center">
+  <img src="Figure_workflow.PNG" width="60%" height="60%" />
+</p>
 
 **NanoChef** is an AI-driven framework for Synthesis Order/Condition Simultaneous Optimization for Bespoke Metal Nanoparticle Synthesis at Autonomous Laboratory. It offers tools for simulatneous optimization in virtual experiments and real chemical experiments.
 
@@ -13,13 +15,21 @@
 - Python 3.9+
 - See `requirements.txt` for full dependency list.
 
-### Setup
+### NanoChef Setup
 
 ```bash
-git clone https://github.com/your-username/NanoChef.git
+git clone https://github.com/KIST-CSRC/NanoChef.git
+```
+```bash
 cd NanoChef
+```
+```bash
 conda create -n NanoChef python=3.9
+```
+```bash
 conda activate NanoChef
+```
+```bash
 pip install -r requirements.txt
 ```
 Windows users can install using .bat file, as below:
@@ -28,7 +38,7 @@ Windows users can install using .bat file, as below:
 install_package_with_git.bat
 ```
 
-### [MatBERT](https://github.com/lbnlp/MatBERT)
+### [MatBERT](https://github.com/lbnlp/MatBERT) Setup
 
 We tried to generate reagent vector using MatBERT, pretrained model.
 
@@ -56,7 +66,7 @@ NanoChef/
 ...
 ```
 
-### [Olympus](https://github.com/aspuru-guzik-group/olympus)
+### [Olympus](https://github.com/aspuru-guzik-group/olympus) Setup
 
 Our virtual experiments was based on Olympus environments, diverse and many virtual spaces.
 
@@ -115,7 +125,7 @@ The following table describes the configuration keys used in the virtual experim
 | ps_dim           | Dimension of the positional encoding (e.g. `ps_dim=4`, each sequential vecotr is 4-dimensaionl vector).                                         |
 | output_dim       | Output dimension of the prediction (usually 1 for scalar loss).        |
 | nn_n_hidden      | Number of hidden neuron size in the neural network.                             |
-| kappa_list       | List of exploration-exploitation trade-off parameters (UCB kappa values). |
+| kappa_list       | List of exploration-exploitation trade-off parameters (UCB (Upper Confidence Bounds) kappa values). |
 | seed_num         | Random seed for reproducibility.                                          |
 | reagent_list     | List of chemical reagents to be used in the virtual experiment.           |
 | rgn_vec_onoff    | Boolean flag to enable or disable reagent vector from MatBERT pretrained model.                   |
@@ -126,16 +136,14 @@ The following table describes the configuration keys used in the virtual experim
 
 ### Run Example
 
-cpu version
+- cpu version
 ```bash
 python virtual_experiments.py --path config/20250628/test.json --cuda cpu
 ```
-gpu version
+- gpu version
 ```bash
 python virtual_experiments.py --path config/20250628/test.json --cuda cuda:0
 ```
-
-
 ---
 
 ## 📁 Project Structure
@@ -170,7 +178,8 @@ NanoChef/
 
 ## 🔧 Key Modules
 
-- `NanoChefModule.py`: Central control unit for real chemical experiment modules
+- `NanoChefModule.py`: AI unit for recipe recommendations in real chemical experiments
+- `module_node.py`: Module for real chemical experiments, connected with [OCTOPUS](https://github.com/KIST-CSRC/Octopus)
 - `Sequence`: Contains architecture of NanoChef
 - `virtual_experiments.py`: Closed-loop virtual experiment simulation
 - `virtual_space_image.py`: Visualization of latent variable space
@@ -179,14 +188,20 @@ NanoChef/
 
 ## 📊 Visualization
 
-You can generate and analyze visualization data using:
+### Visualization of virtual spaces
+You can generate to visualize virtual spaces using:
 
 ```bash
 python virtual_space_image.py
 ```
 
-or inspect customized visual outputs from `visualization_data.py`.
+This images of virtual space and spearman coefficient values of virtual space combinations can help to organize virtual space combinations for virtual experiments.
 
+### Visualization of the performance of virtual experiments
+Customized visual outputs from `visualization_data.py`.
+- def visualization_model_performance
+- def visualization_scatter
+- def create_gif
 ---
 
 ## 🙋 Author
@@ -205,3 +220,7 @@ For more details, see the paper below.
 Please cite us if you are using our model in your research work: <br />
 
   [1] 	[Hyuk Jun. Yoo., et al. "NanoChef: AI Framework for Simultaneous Optimization of Synthesis Sequences and Reaction Conditions in Autonomous Laboratories" ChemRxiv (2025).](https://chemrxiv.org/engage/chemrxiv/article-details/685bb51d3ba0887c337fc094)
+  
+  [2] 	[Trewartha, Amalie, et al. "Quantifying the advantage of domain-specific pre-training on named entity recognition tasks in materials science." Patterns 3.4 (2022).](https://www.cell.com/patterns/fulltext/S2666-3899(22)00073-3)
+  
+  [3] 	[Häse, Florian, et al. "Olympus: a benchmarking framework for noisy optimization and experiment planning." Machine Learning: Science and Technology 2.3 (2021): 035021.](https://iopscience.iop.org/article/10.1088/2632-2153/abedc8/meta)
