@@ -30,7 +30,7 @@ Windows users can install using .bat file, as below:
 install_package_with_git.bat
 ```
 
-### [MatBERT](https://github.com/lbnlp/MatBERT) Setup
+### [MatBERT<sup>2</sup>](https://github.com/lbnlp/MatBERT) Setup
 
 We tried to generate reagent vector using MatBERT, pretrained model.
 
@@ -58,7 +58,7 @@ NanoChef/
 ...
 ```
 
-### [Olympus](https://github.com/aspuru-guzik-group/olympus) Setup
+### [Olympus<sup>3</sup>](https://github.com/aspuru-guzik-group/olympus) Setup
 
 Our virtual experiments was based on Olympus environments, diverse and many virtual spaces.
 
@@ -171,7 +171,7 @@ NanoChef/
 ## 🔧 Key Modules
 
 - `NanoChefModule.py`: AI unit for recipe recommendations in real chemical experiments
-- `module_node.py`: Module for real chemical experiments, connected with [OCTOPUS](https://github.com/KIST-CSRC/Octopus)
+- `module_node.py`: Module for real chemical experiments, connected with [OCTOPUS<sup>4<sup>](https://github.com/KIST-CSRC/Octopus)
 - `Sequence`: Contains architecture of NanoChef
 - `virtual_experiments.py`: Closed-loop virtual experiment simulation
 - `virtual_space_image.py`: Visualization of latent variable space
@@ -200,6 +200,27 @@ python visualization_data.py
 - def create_gif
 ---
 
+## 🚀 Quick Start of real chemcial experiments
+
+### Activate module node of NanoChef
+
+```bash
+python module_node.py
+```
+
+### Activate [OCTOPUS<sup>4<sup>](https://github.com/KIST-CSRC/Octopus)
+
+```bash
+python master_node.py
+```
+
+### login/submit job script via OCTOPUS
+
+```bash
+qsub {jobscript_dirpath}/{jobscript_name} real
+```
+---
+
 ## 🙋 Author
 
 Developed by [Hyuk Jun Yoo](mailto:hyukjunus@gmail.com) at Korea Institute of Science and Technology (KIST)
@@ -210,6 +231,7 @@ Developed by [Hyuk Jun Yoo](mailto:hyukjunus@gmail.com) at Korea Institute of Sc
 
 - [MatBERT](https://github.com/materialsintelligence/matbert) for pretrained materials-aware BERT models  
 - [Olympus](https://github.com/aspuru-guzik-group/olympus) for providing virtual spaces of virtual experiments
+- [OCTOPUS](https://github.com/KIST-CSRC/Octopus) for orchestrating module node as central management system
 
 ## Reference
 For more details, see the paper below.
@@ -220,3 +242,5 @@ Please cite us if you are using our model in your research work: <br />
   [2] 	[Trewartha, Amalie, et al. "Quantifying the advantage of domain-specific pre-training on named entity recognition tasks in materials science." Patterns 3.4 (2022).](https://www.cell.com/patterns/fulltext/S2666-3899(22)00073-3)
   
   [3] 	[Häse, Florian, et al. "Olympus: a benchmarking framework for noisy optimization and experiment planning." Machine Learning: Science and Technology 2.3 (2021): 035021.](https://iopscience.iop.org/article/10.1088/2632-2153/abedc8/meta)
+
+  [4] 	[Yoo, Hyuk Jun, et al. "OCTOPUS: operation control system for task optimization and job parallelization via a user-optimal scheduler." Nature communications 15.1 (2024): 9669.](https://www.nature.com/articles/s41467-024-54067-7)
