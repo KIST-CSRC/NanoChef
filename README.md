@@ -97,9 +97,9 @@ NanoChef/
 
 ---
 
-## 🚀 Quick Start of virtual experiments
+## 🚀 Quick Start of Virtual Experiments
 
-### Make a job script
+### Generate a Job Script
 
 The following table describes the configuration keys used in the virtual experiment JSON config file:
 
@@ -126,7 +126,7 @@ The following table describes the configuration keys used in the virtual experim
 | lr               | Learning rate for training the neural network.                            |
 | patience         | Number of epochs to wait before early stopping if no improvement.         |
 
-### Run Example
+### Run Examples
 
 - cpu version
 ```bash
@@ -180,7 +180,7 @@ NanoChef/
 
 ## 📊 Visualization
 
-### Visualization of virtual spaces
+### Visualization of Virtual Spaces
 You can generate to visualize virtual spaces using:
 
 ```bash
@@ -189,7 +189,7 @@ python virtual_space_image.py
 
 This images of virtual space and spearman coefficient values of virtual space combinations can help to organize virtual space combinations for virtual experiments.
 
-### Visualization of the performance of virtual experiments
+### Visualization of the Performance of Virtual Experiments
 You can visualize outputs of virtual experiments.
 ```bash
 python visualization_data.py
@@ -200,9 +200,9 @@ python visualization_data.py
 - def create_gif
 ---
 
-## 🚀 Quick Start of real chemcial experiments
+## 🚀 Quick Start of Real Chemcial Experiments
 
-### Activate module node of NanoChef
+### Activate Module Node of NanoChef
 
 ```bash
 python module_node.py
@@ -214,7 +214,7 @@ python module_node.py
 python master_node.py
 ```
 
-### login/submit job script via OCTOPUS
+### Login/Submit Job Script via OCTOPUS
 
 ```bash
 qsub {jobscript_dirpath}/{jobscript_name} real
