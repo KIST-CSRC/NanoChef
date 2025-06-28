@@ -1,10 +1,10 @@
-# NanoChef
+# NanoChef: AI Framework for Simultaneous Optimization of Synthesis Sequences and Reaction Conditions at Autonomous Laboratories
 
 <p align="center">
   <img src="Figure_workflow.PNG" width="60%" height="60%" />
 </p>
 
-**NanoChef** is an AI-driven framework for Synthesis Order/Condition Simultaneous Optimization for Bespoke Metal Nanoparticle Synthesis at Autonomous Laboratory. It offers tools for simulatneous optimization in virtual experiments and real chemical experiments.
+<i>**NanoChef**</i> is an AI framework for virtual experimentation and autonomous materials discovery. With support for MatBERT embeddings, neural surrogate modeling, and high-throughput virtual experiments, <i>**NanoChef**</i> enables intelligent synthesis exploration of complex design spaces via synthesis order and reaction conditions optimization. Whether you're optimizing synthesis conditions or testing surrogate models, <i>**NanoChef**</i> provides a modular and extensible platform for scientific automation.
 
 ---
 
@@ -190,7 +190,11 @@ python virtual_space_image.py
 This images of virtual space and spearman coefficient values of virtual space combinations can help to organize virtual space combinations for virtual experiments.
 
 ### Visualization of the performance of virtual experiments
-Customized visual outputs from `visualization_data.py`.
+You can visualize outputs of virtual experiments.
+```bash
+python visualization_data.py
+```
+
 - def visualization_model_performance
 - def visualization_scatter
 - def create_gif
