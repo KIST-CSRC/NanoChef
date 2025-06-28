@@ -19,17 +19,9 @@
 
 ```bash
 git clone https://github.com/KIST-CSRC/NanoChef.git
-```
-```bash
 cd NanoChef
-```
-```bash
 conda create -n NanoChef python=3.9
-```
-```bash
 conda activate NanoChef
-```
-```bash
 pip install -r requirements.txt
 ```
 Windows users can install using .bat file, as below:
