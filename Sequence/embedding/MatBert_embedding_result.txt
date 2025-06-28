@@ -1,0 +1,188 @@
+NaBH4
+====================================================================================================
+MatBERT tokenizer: ['NaBH4']
+MatBERT tokenizer: {'input_ids': [2, 14214, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['Na', '##B', '##H', '##4']
+
+AgNO3
+====================================================================================================
+MatBERT tokenizer: ['AgNO3']
+MatBERT tokenizer: {'input_ids': [2, 16981, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['A', '##g', '##N', '##O', '##3']
+
+H2O2
+====================================================================================================
+MatBERT tokenizer: ['H2O2']
+MatBERT tokenizer: {'input_ids': [2, 6164, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['H', '##2', '##O', '##2']
+
+Sodium citrate
+====================================================================================================
+MatBERT tokenizer: ['Sodium', 'citrate']
+MatBERT tokenizer: {'input_ids': [2, 17228, 11948, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['So', '##dium', 'c', '##it', '##rate']
+
+H2O
+====================================================================================================
+MatBERT tokenizer: ['H2O']
+MatBERT tokenizer: {'input_ids': [2, 4199, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['H', '##2', '##O']
+
+HAuCl4
+====================================================================================================
+MatBERT tokenizer: ['HAuCl4']
+MatBERT tokenizer: {'input_ids': [2, 21172, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['H', '##A', '##u', '##C', '##l', '##4']
+
+PVP10
+====================================================================================================
+MatBERT tokenizer: ['PVP', '##10']
+MatBERT tokenizer: {'input_ids': [2, 10789, 2719, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['P', '##VP', '##10']
+
+PVP55
+====================================================================================================
+MatBERT tokenizer: ['PVP', '##55']
+MatBERT tokenizer: {'input_ids': [2, 10789, 8656, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['P', '##VP', '##55']
+
+ascorbic acid
+====================================================================================================
+MatBERT tokenizer: ['ascorbic', 'acid']
+MatBERT tokenizer: {'input_ids': [2, 16021, 2579, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['as', '##cor', '##bic', 'acid']
+
+Au seed
+====================================================================================================
+MatBERT tokenizer: ['Au', 'seed']
+MatBERT tokenizer: {'input_ids': [2, 3503, 5738, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['Au', 'seed']
+
+Ag seed
+====================================================================================================
+MatBERT tokenizer: ['Ag', 'seed']
+MatBERT tokenizer: {'input_ids': [2, 3219, 5738, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['A', '##g', 'seed']
+
+
+NaBH4
+====================================================================================================
+MatBERT tokenizer: ['NaBH4']
+MatBERT tokenizer: {'input_ids': [2, 14214, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['Na', '##B', '##H', '##4']
+
+AgNO3
+====================================================================================================
+MatBERT tokenizer: ['AgNO3']
+MatBERT tokenizer: {'input_ids': [2, 16981, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['A', '##g', '##N', '##O', '##3']
+
+H2O2
+====================================================================================================
+MatBERT tokenizer: ['H2O2']
+MatBERT tokenizer: {'input_ids': [2, 6164, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['H', '##2', '##O', '##2']
+
+Sodium citrate
+====================================================================================================
+MatBERT tokenizer: ['Sodium', 'citrate']
+MatBERT tokenizer: {'input_ids': [2, 17228, 11948, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['So', '##dium', 'c', '##it', '##rate']
+
+H2O
+====================================================================================================
+MatBERT tokenizer: ['H2O']
+MatBERT tokenizer: {'input_ids': [2, 4199, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['H', '##2', '##O']
+
+HAuCl4
+====================================================================================================
+MatBERT tokenizer: ['HAuCl4']
+MatBERT tokenizer: {'input_ids': [2, 21172, 3], 'token_type_ids': [0, 0, 0], 'attention_mask': [1, 1, 1]}
+BERT tokenizer: ['H', '##A', '##u', '##C', '##l', '##4']
+
+PVP10
+====================================================================================================
+MatBERT tokenizer: ['PVP', '##10']
+MatBERT tokenizer: {'input_ids': [2, 10789, 2719, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['P', '##VP', '##10']
+
+PVP55
+====================================================================================================
+MatBERT tokenizer: ['PVP', '##55']
+MatBERT tokenizer: {'input_ids': [2, 10789, 8656, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['P', '##VP', '##55']
+
+ascorbic acid
+====================================================================================================
+MatBERT tokenizer: ['ascorbic', 'acid']
+MatBERT tokenizer: {'input_ids': [2, 16021, 2579, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['as', '##cor', '##bic', 'acid']
+
+Au seed
+====================================================================================================
+MatBERT tokenizer: ['Au', 'seed']
+MatBERT tokenizer: {'input_ids': [2, 3503, 5738, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['Au', 'seed']
+
+Ag seed
+====================================================================================================
+MatBERT tokenizer: ['Ag', 'seed']
+MatBERT tokenizer: {'input_ids': [2, 3219, 5738, 3], 'token_type_ids': [0, 0, 0, 0], 'attention_mask': [1, 1, 1, 1]}
+BERT tokenizer: ['A', '##g', 'seed']
+
+(seqopt) sdl-main@sdlmain:~/catkin_ws/src/olympus$ /home/sdl-main/anaconda3/envs/seqopt/bin/python /home/sdl-main/catkin_ws/src/olympus/Sequence/embedding/MatBert_embedding.py
+NaBH4
+====================================================================================================
+MatBERT tokenizer: ['NaBH4']
+BERT tokenizer: ['Na', '##B', '##H', '##4']
+
+AgNO3
+====================================================================================================
+MatBERT tokenizer: ['AgNO3']
+BERT tokenizer: ['A', '##g', '##N', '##O', '##3']
+
+H2O2
+====================================================================================================
+MatBERT tokenizer: ['H2O2']
+BERT tokenizer: ['H', '##2', '##O', '##2']
+
+Sodium citrate
+====================================================================================================
+MatBERT tokenizer: ['Sodium', 'citrate']
+BERT tokenizer: ['So', '##dium', 'c', '##it', '##rate']
+
+H2O
+====================================================================================================
+MatBERT tokenizer: ['H2O']
+BERT tokenizer: ['H', '##2', '##O']
+
+HAuCl4
+====================================================================================================
+MatBERT tokenizer: ['HAuCl4']
+BERT tokenizer: ['H', '##A', '##u', '##C', '##l', '##4']
+
+PVP10
+====================================================================================================
+MatBERT tokenizer: ['PVP', '##10']
+BERT tokenizer: ['P', '##VP', '##10']
+
+PVP55
+====================================================================================================
+MatBERT tokenizer: ['PVP', '##55']
+BERT tokenizer: ['P', '##VP', '##55']
+
+ascorbic acid
+====================================================================================================
+MatBERT tokenizer: ['ascorbic', 'acid']
+BERT tokenizer: ['as', '##cor', '##bic', 'acid']
+
+Au seed
+====================================================================================================
+MatBERT tokenizer: ['Au', 'seed']
+BERT tokenizer: ['Au', 'seed']
+
+Ag seed
+====================================================================================================
+MatBERT tokenizer: ['Ag', 'seed']
+BERT tokenizer: ['A', '##g', 'seed']

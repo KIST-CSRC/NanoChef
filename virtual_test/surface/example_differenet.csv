@@ -1,0 +1,16 @@
+Combination,spearman_corr
+Branin/Michalewicz,-0.05998651268676995
+Branin/Rosenbrock,-0.051016795188321
+Branin/Schwefel,-0.011634556949750045
+Branin/StyblinskiTang,0.19221092995844163
+Branin/GaussianMixture,-0.1119011394990114
+Michalewicz/Rosenbrock,0.3723632172382426
+Michalewicz/Schwefel,0.03693952978589223
+Michalewicz/StyblinskiTang,0.0448423108573775
+Michalewicz/GaussianMixture,0.43994536984749827
+Rosenbrock/Schwefel,0.08246389041399034
+Rosenbrock/StyblinskiTang,0.2687035542840895
+Rosenbrock/GaussianMixture,0.3329235167522339
+Schwefel/StyblinskiTang,-0.05370896095951126
+Schwefel/GaussianMixture,-0.04451792143269818
+StyblinskiTang/GaussianMixture,0.2532743816038684

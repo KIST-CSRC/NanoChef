@@ -1,0 +1,28 @@
+{
+    "subject":"test",
+    "description":"test",
+    "log_level":"INFO",
+    "model_name":"NN+Gamma",
+    
+    "total_surfaces":[
+        ["Dejong", "HyperEllipsoid"]
+    ],
+
+    "num_variables":2,
+    "initial_n_sample":20,
+    "n_points":101,
+    "batch_size":4,
+    "ps_dim":4,
+    "output_dim":1,
+    "nn_n_hidden":500,
+    "kappa_list":[0.01, 0.05, 0.1],
+    "seed_num":1,
+
+    "reagent_list":["AgNO3","NaBH4"],
+    "rgn_vec_onoff":false,
+
+    "n_search_epochs":100,
+    "n_train_epochs":2,
+    "lr":0.001,
+    "patience":1000
+}

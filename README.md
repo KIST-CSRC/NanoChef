@@ -1,2 +1,207 @@
 # NanoChef
-Synthesis Order/Condition Simultaneous Optimization for Bespoke Metal Nanoparticle Synthesis via Autonomous Laboratory
+
+![alt text](Figure_workflow.PNG)
+
+**NanoChef** is an AI-driven framework for Synthesis Order/Condition Simultaneous Optimization for Bespoke Metal Nanoparticle Synthesis at Autonomous Laboratory. It offers tools for simulatneous optimization in virtual experiments and real chemical experiments.
+
+---
+
+## 📦 Installation
+
+### Requirements
+
+- Python 3.9+
+- See `requirements.txt` for full dependency list.
+
+### Setup
+
+```bash
+git clone https://github.com/your-username/NanoChef.git
+cd NanoChef
+conda create -n NanoChef python=3.9
+conda activate NanoChef
+pip install -r requirements.txt
+```
+Windows users can install using .bat file, as below:
+
+```bash
+install_package_with_git.bat
+```
+
+### [MatBERT](https://github.com/lbnlp/MatBERT)
+
+We tried to generate reagent vector using MatBERT, pretrained model.
+
+To use MatBERT, download these files into a folder:
+
+```
+export MODEL_PATH="Your path"
+mkdir $MODEL_PATH/matbert-base-cased $MODEL_PATH/matbert-base-uncased
+
+curl -# -o $MODEL_PATH/matbert-base-cased/config.json https://cedergroup-share.s3-us-west-2.amazonaws.com/public/MatBERT/model_2Mpapers_cased_30522_wd/config.json
+curl -# -o $MODEL_PATH/matbert-base-cased/vocab.txt https://cedergroup-share.s3-us-west-2.amazonaws.com/public/MatBERT/model_2Mpapers_cased_30522_wd/vocab.txt
+curl -# -o $MODEL_PATH/matbert-base-cased/pytorch_model.bin https://cedergroup-share.s3-us-west-2.amazonaws.com/public/MatBERT/model_2Mpapers_cased_30522_wd/pytorch_model.bin
+
+curl -# -o $MODEL_PATH/matbert-base-uncased/config.json https://cedergroup-share.s3-us-west-2.amazonaws.com/public/MatBERT/model_2Mpapers_uncased_30522_wd/config.json
+curl -# -o $MODEL_PATH/matbert-base-uncased/vocab.txt https://cedergroup-share.s3-us-west-2.amazonaws.com/public/MatBERT/model_2Mpapers_uncased_30522_wd/vocab.txt
+curl -# -o $MODEL_PATH/matbert-base-uncased/pytorch_model.bin https://cedergroup-share.s3-us-west-2.amazonaws.com/public/MatBERT/model_2Mpapers_uncased_30522_wd/pytorch_model.bin
+```
+
+Then some folder will generate, as below.
+```text
+NanoChef/
+...
+├── matbert-base-cased/
+├── matbert-base-uncased/
+...
+```
+
+### [Olympus](https://github.com/aspuru-guzik-group/olympus)
+
+Our virtual experiments was based on Olympus environments, diverse and many virtual spaces.
+
+``Olympus`` can be installed with ``pip``:
+
+```
+pip install olymp
+```
+
+The package can also be installed via ``conda``:
+
+```
+conda install -c conda-forge olymp
+```
+
+Finally, the package can be built from source:
+
+``` 
+git clone https://github.com/aspuru-guzik-group/olympus.git
+cd olympus
+python setup.py develop
+```
+
+Then some folder will generate, as below.
+```text
+NanoChef/
+...
+├── case_studies/
+├── cifar/
+├── docs/
+├── examples/
+├── my_new_emulator/
+├── src/
+...
+```
+
+---
+
+## 🚀 Quick Start of virtual experiments
+
+### Make a job script
+
+The following table describes the configuration keys used in the virtual experiment JSON config file:
+
+| Key              | Description                                                               |
+|:-----------------|:--------------------------------------------------------------------------|
+| subject          | Name or label of the virtual experiment run.                              |
+| description      | Optional description or notes about the run.                              |
+| log_level        | Verbosity of logging (e.g., DEBUG, INFO, WARNING).                        |
+| model_name       | Name of the model used (e.g., NN+Gamma).                                  |
+| total_surfaces   | List of benchmark functions to be optimized (e.g., ` [["Dejong", "HyperEllipsoid"], ["Dejong", "Denali"]]`).                              |
+| num_variables    | Number of input continuous variables (dimensions of the continuous variables).               |
+| initial_n_sample | Number of initial random samples before active learning begins.             |
+| n_points         | Number of points to be divided range of each variables. (e.g. `n_points=101`, 100 grids in each variables)         |
+| batch_size       | Number of samples selected in each batch.                                 |
+| ps_dim           | Dimension of the positional encoding (e.g. `ps_dim=4`, each sequential vecotr is 4-dimensaionl vector).                                         |
+| output_dim       | Output dimension of the prediction (usually 1 for scalar loss).        |
+| nn_n_hidden      | Number of hidden neuron size in the neural network.                             |
+| kappa_list       | List of exploration-exploitation trade-off parameters (UCB kappa values). |
+| seed_num         | Random seed for reproducibility.                                          |
+| reagent_list     | List of chemical reagents to be used in the virtual experiment.           |
+| rgn_vec_onoff    | Boolean flag to enable or disable reagent vector from MatBERT pretrained model.                   |
+| n_search_epochs  | Number of active search (optimization) iterations.                        |
+| n_train_epochs   | Number of epochs for training the surrogate model.                        |
+| lr               | Learning rate for training the neural network.                            |
+| patience         | Number of epochs to wait before early stopping if no improvement.         |
+
+### Run Example
+
+cpu version
+```bash
+python virtual_experiments.py --path config/20250628/test.json --cuda cpu
+```
+gpu version
+```bash
+python virtual_experiments.py --path config/20250628/test.json --cuda cuda:0
+```
+
+
+---
+
+## 📁 Project Structure
+
+```text
+NanoChef/
+├── BaseUtils/
+├── case_studies/
+├── cifar/
+├── config/
+├── docs/
+├── examples/
+├── Log/
+├── matbert-base-cased/
+├── matbert-base-uncased/
+├── my_new_emulator/
+├── Sequence/
+├── src/
+├── install_package_with_git.bat
+├── latin_hypercube_sampling_test.py
+├── NanoChefModule.py
+├── module_node.py
+├── requirements.txt
+├── virtual_experiments.py
+├── virtual_space_image.py
+├── virtual_test/
+├── visualization_data.py
+└── README.md
+```
+
+---
+
+## 🔧 Key Modules
+
+- `NanoChefModule.py`: Central control unit for real chemical experiment modules
+- `Sequence`: Contains architecture of NanoChef
+- `virtual_experiments.py`: Closed-loop virtual experiment simulation
+- `virtual_space_image.py`: Visualization of latent variable space
+
+---
+
+## 📊 Visualization
+
+You can generate and analyze visualization data using:
+
+```bash
+python virtual_space_image.py
+```
+
+or inspect customized visual outputs from `visualization_data.py`.
+
+---
+
+## 🙋 Author
+
+Developed by [Hyuk Jun Yoo](mailto:hyukjunus@gmail.com) at Korea Institute of Science and Technology (KIST)
+
+---
+
+## 🙏 Acknowledgments
+
+- [MatBERT](https://github.com/materialsintelligence/matbert) for pretrained materials-aware BERT models  
+- [Olympus](https://github.com/aspuru-guzik-group/olympus) for providing virtual spaces of virtual experiments
+
+## Reference
+For more details, see the paper below.
+Please cite us if you are using our model in your research work: <br />
+
+  [1] 	[Hyuk Jun. Yoo., et al. "NanoChef: AI Framework for Simultaneous Optimization of Synthesis Sequences and Reaction Conditions in Autonomous Laboratories" ChemRxiv (2025).](https://chemrxiv.org/engage/chemrxiv/article-details/685bb51d3ba0887c337fc094)

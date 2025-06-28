@@ -1,0 +1,16 @@
+Combination,spearman_corr
+Dejong/HyperEllipsoid,0.882055901612387
+Dejong/AckleyPath,0.7112479024118203
+Dejong/Rastrigin,0.6640375651139323
+Dejong/LinearFunnel,0.738830588584022
+Dejong/Levy,0.7002487083929683
+HyperEllipsoid/AckleyPath,0.7416286438720127
+HyperEllipsoid/Rastrigin,0.672609952075262
+HyperEllipsoid/LinearFunnel,0.8496742366081088
+HyperEllipsoid/Levy,0.6096866718163229
+AckleyPath/Rastrigin,0.5415096571734239
+AckleyPath/LinearFunnel,0.7404374208553405
+AckleyPath/Levy,0.5834990695628348
+Rastrigin/LinearFunnel,0.6042194449943104
+Rastrigin/Levy,0.5162615861896479
+LinearFunnel/Levy,0.6125862023327531
